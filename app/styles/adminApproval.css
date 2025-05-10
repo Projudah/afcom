@@ -1,0 +1,41 @@
+.admin-verification-page {
+    padding: 20px;
+  }
+  
+  /* Verification Badge Styles */
+  .verification-badge {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 20px 0;
+  }
+  
+  .verification-badge .icon {
+    font-size: 2.5rem;
+    margin-right: 10px;
+  }
+  
+  .verification-badge div {
+    display: flex;
+    align-items: center;
+  }
+  
+  .verification-badge span {
+    font-weight: bold;
+  }
+  
+  .verification-badge .toggle-btn {
+    margin-left: 20px;
+    font-size: 1rem;
+  }
+  
+  /* Optional: Make the store info card look clean */
+  .store-info-card {
+    margin-top: 30px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 10px;
+  }
+  

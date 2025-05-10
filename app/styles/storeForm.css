@@ -1,0 +1,62 @@
+/* src/styles/StoreForm.css */
+
+.storeForm-main-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .create-store-btn {
+    display: block;
+    padding: 20px;
+    align-content: center;
+    width: 20%;
+  }
+
+  .agree-checkbox{
+    padding: 20px;
+  }
+  
+  .storeForm-container{
+    padding: 15px;
+  }
+
+  .businessType-checkbox-container{
+    margin-left: 20%;
+  }
+
+
+/* src/styles/adminStoreRequests.css */
+
+.admin-page-main-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.admin-request-item {
+  margin-bottom: 20px;
+}
+
+.admin-file-access {
+  margin-top: 20px;
+}
+
+.admin-file-access a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.admin-file-access a:hover {
+  text-decoration: underline;
+}

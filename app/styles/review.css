@@ -1,0 +1,29 @@
+/* src/styles/ReviewForm.css */
+
+
+.review-form {
+  margin-top: 20px;
+}
+
+.star-rating {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+}
+
+.star {
+  cursor: pointer;
+}
+
+
+  /* src/styles/ReviewList.css */
+
+  .review-list {
+    margin-top: 20px;
+  }
+  
+  .review-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }

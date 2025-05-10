@@ -1,0 +1,217 @@
+/* src/styles/storeCarousel.css */
+.carousel-image {
+    height: 400px;
+    object-fit: cover;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .latest-stores-name{
+    color: black;
+  }
+
+  .latest-stores-description{
+    color: black;
+  }
+
+  /* src/styles/popularStores.css */
+.card img {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+
+/* src/styles/categoryPopularStores.css */
+.card img {
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .header-controls-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: left;
+    margin: 0;
+  }
+  
+  .controls-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navigation-arrows-component {
+    display: flex;
+    align-items: center;
+  }
+/* src/styles/promotionalBanner.css */
+.promotional-banner {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.banner-title {
+  font-weight: bold;
+}
+
+/* src/styles/storeStatistics.css */
+.store-statistics {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.store-statistics h4 {
+  font-weight: bold;
+}
+
+/* src/styles/popularProducts.css */
+.popular-products-section {
+  margin-top: 40px;
+
+}
+
+.popular-product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.featured-body-text{
+  padding: 5px ;
+}
+.popular-product-image {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 4px 4px 0 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* This design is for the top rated column component */
+/* Star rating container */
+.star-rating {
+  display: flex;
+  align-items: center;
+  /* margin-top: 10px; */
+  font-size: 1rem;
+}
+
+/* Add a prefix for Top Rated */
+.top-rated-prefix {
+  margin-right: 8px;
+  font-weight: bold;
+  color: #007bff; /* Blue color for the "Top Rated" text */
+}
+
+.rating-count {
+  font-size: 0.9rem;
+  color: #666;
+  margin-left: 8px;
+}
+
+/* Rating count */
+.rating-box {
+  font-size: 0.85rem; /* Smaller font for ratings count */
+  color: #555;
+  padding: 5px;
+
+}
+
+/* Arrow button styles */
+.controls-container button {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: 2px solid #007bff;
+  border-radius: 50%;
+  color: #007bff;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.controls-container button:hover {
+  background-color: #007bff;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.controls-container button:disabled {
+  opacity: 0.5;
+  background-color: #f8f9fa;
+  cursor: not-allowed;
+}
+
+
+.navigation-arrows-component {
+  display: flex;
+  align-items: center;
+}
+
+
+/* "view more" button used in the browse page */
+
+.custom-see-all-btn {
+  margin-left: 10px;
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 16px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-see-all-btn::after {
+  content: '→';
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.custom-see-all-btn:hover::after {
+  transform: translateX(5px);  /* Add a slight movement to the arrow on hover */
+}
+
+.custom-see-all-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.custom-see-all-btn:active {
+  background-color: #004085;
+  transform: scale(0.95);
+}
+
+

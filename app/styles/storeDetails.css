@@ -1,0 +1,255 @@
+/* src/styles/StoreDetailHeader.css */
+
+.store-detail-header {
+    background-color: #ffffff;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+  
+  .store-logo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .store-detail-header .fa {
+    margin-right: 10px;
+  }
+  
+  .review-section {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .stars {
+    color: #FFD700;
+  }
+  
+  .store-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .social-icons {
+    display: flex;
+    /* margin-left: 20px; */
+  }
+  
+  .social-icons .icon {
+    font-size: 1.5em;
+    margin-right: 10px;
+    color: #555;
+    cursor: pointer;
+  }
+  
+  .social-icons .icon:hover {
+    color: #007bff;
+  }
+  
+  .store-detail-header a {
+    color: #007bff;
+  }
+  
+  .store-detail-header a:hover {
+    text-decoration: underline;
+  }
+  
+  .email-website-separator {
+    display: inline-block;
+    width: 20px; /* Adjust width as necessary */
+  }
+
+  .storeDetails-button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  
+  .inquiry-button,
+  .storeDetails-chat-button {
+    white-space: nowrap;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .storeDetails-button-icon {
+    margin-right: 5px;
+  }
+  
+  @media (max-width: 767px) {
+    .storeDetails-button-group {
+      justify-content: center;
+      margin-top: 20px;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 991px) {
+    .storeDetails-button-group {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+
+  .store-detail-header-wrapper {
+    position: relative;
+  }
+  
+  .chat-box-container {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+
+
+  /* src/styles/StoreDetail.css */
+
+.store-detail-container {
+    margin-top: 20px;
+  }
+  
+  .sidebar {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-list {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-card {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+
+
+  .subNavBar-header{
+    padding: 15px;
+  }
+
+  .inquiry-container{
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .inquiryModal-Header{
+    background-color:#007bff;
+    color: white;
+  }
+ 
+  .sold-out-tag {
+    background-color: rgb(22, 22, 237);
+    color: white;
+    font-weight: bold; 
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+   .product-actions {
+    justify-content: space-between;
+    margin-top: 10px;
+  } 
+
+  .markSoldOut-edit{
+    margin-bottom: 15px;
+  }
+
+
+
+  .service-list {
+    margin-top: 20px;
+  }
+  
+  .service-card {
+    padding: 15px;
+    /* border: 1px solid #ddd; */
+    border-radius: 8px;
+    margin-bottom: 20px;
+    /* background-color: #f9f9f9; */
+  }
+  
+  .service-card h5 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .service-card p {
+    margin-bottom: 8px;
+  }
+  
+  .service-card strong {
+    color: #007bff;
+  }
+  
+  .discount-list {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.discount-card {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Verification Badge Styles */
+.store-verification {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.verified-badge, .unverified-badge {
+  font-size: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.verified-badge {
+  color: #28a745; /* Green for verified */
+}
+
+.verified-badge svg {
+  margin-right: 5px;
+}
+
+.unverified-badge {
+  color: #dc3545; /* Red for unverified */
+}
+
+.unverified-badge svg {
+  margin-right: 5px;
+}
+
+/* Adjust spacing for the toggle button */
+.store-verification .btn {
+  font-size: 0.8rem;
+  padding: 2px 8px;
+}
+
+
+/* .services-row-container{
+  padding: 40px;
+} */

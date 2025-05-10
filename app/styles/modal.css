@@ -1,0 +1,78 @@
+/* modalStyles.css */
+.modal-container {
+    padding: 20px;
+    background-color: #fff;
+    max-width: 90%;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .modal-title {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .modal-grid {
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+  
+  .pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 15px; /* Add space between buttons and page number */
+  }
+  
+  .page-number {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .pagination-button {
+    background-color: #007bff; /* Blue color for the button */
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .pagination-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+  }
+  
+  .pagination-button:disabled {
+    background-color: #cccccc; /* Gray for disabled state */
+    cursor: not-allowed;
+  }
+  
+  .modal-close-button {
+    display: block;
+    margin: 20px auto;
+    background-color: #f44336; /* Red color for close button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .modal-close-button:hover {
+    background-color: #d32f2f;
+    transform: translateY(-2px);
+  }
+  
+  

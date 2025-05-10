@@ -1,0 +1,152 @@
+/* src/styles/complaintPage.css */
+
+.complaint-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 80px; /* Push the container down */
+}
+
+.complaint-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.complaint-form-group {
+  margin-bottom: 15px;
+}
+
+.complaint-form-group label {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #555;
+}
+
+.complaint-container input,
+.complaint-container textarea {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.complaint-container input:focus,
+.complaint-container textarea:focus {
+  border-color: #007bff;
+  box-shadow: none;
+}
+
+.complaint-alert {
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background-color: #007bff;
+  border-color: #007bff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.back-button {
+  padding: 8px 15px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+
+/* src/styles/customerSupport.css */
+.customer-support-container {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.support-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.support-options {
+  display: flex;
+  justify-content: space-around;
+}
+
+.support-option {
+  text-align: center;
+  flex-basis: 30%;
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.support-option h5 {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+.support-icon {
+  font-size: 2rem;
+  color: #007bff;
+}
+
+.email-modal .modal-title,
+.chat-modal .modal-title {
+  font-weight: bold;
+}
+
+.email-modal .form-label,
+.chat-modal .form-label {
+  font-weight: bold;
+}
+
+.chat-history {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  background-color: #f1f1f1;
+}
+
+.chat-message {
+  padding: 8px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.chat-message.customer {
+  background-color: #007bff;
+  color: white;
+  text-align: right;
+}
+
+.chat-message.support {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.chat-modal .form-control {
+  width: 100%;
+  margin-bottom: 10px;
+}

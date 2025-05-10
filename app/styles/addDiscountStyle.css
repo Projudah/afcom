@@ -1,0 +1,41 @@
+/* Custom styles for the Add Discount Modal */
+.add-discount-modal .modal-content {
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .add-discount-modal .modal-header {
+    background-color: #007bff;
+    border-bottom: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .add-discount-modal .modal-header .modal-title {
+    color: #ffffff;
+    font-weight: bold;
+  }
+  
+  .add-discount-modal .modal-body {
+    padding: 30px;
+  }
+  
+  .add-discount-modal .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .add-discount-modal .form-control {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+  }
+  
+  .add-discount-modal .form-check {
+    margin-right: 15px;
+  }
+  
+  .add-discount-modal .modal-footer {
+    border-top: none;
+    padding: 20px;
+  }
+  

@@ -1,0 +1,144 @@
+/* src/styles/prefixMessageCenter.css */
+
+.prefix-message-center {
+  padding: 20px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.prefix-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.prefix-header h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #343a40;
+}
+
+.prefix-header p {
+  color: #6c757d;
+  margin-top: 10px;
+}
+
+.prefix-back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.prefix-search-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.prefix-search-bar {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.prefix-message-list {
+  margin-top: 20px;
+}
+
+.prefix-message-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+
+.prefix-message-item:hover {
+  background-color: #f1f1f1;
+}
+
+.prefix-message-avatar {
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.prefix-avatar-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.prefix-message-info {
+  flex-grow: 1;
+  cursor: pointer;
+}
+
+.prefix-message-info h5 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #343a40;
+}
+
+.prefix-message-info p {
+  margin: 0;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.prefix-message-info .prefix-unread-message {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.prefix-message-date {
+  font-size: 0.8rem;
+  color: #adb5bd;
+}
+
+.prefix-message-actions {
+  display: flex;
+  gap: 15px;
+  margin-left: 15px;
+}
+
+.prefix-pin-icon,
+.prefix-archive-icon,
+.prefix-delete-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #6c757d;
+}
+
+.prefix-pin-icon.pinned {
+  color: #007bff;
+}
+
+.prefix-archive-icon {
+  color: #17a2b8;
+}
+
+.prefix-delete-icon {
+  color: #dc3545;
+}
+
+.prefix-chat-box {
+  min-height: 200px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+}
+
+.prefix-message-reply {
+  display: flex;
+}
+
+.prefix-message-reply input {
+  border-radius: 20px;
+}
+
+.prefix-message-reply button {
+  border-radius: 20px;
+  margin-left: 10px;
+}

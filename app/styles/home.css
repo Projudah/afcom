@@ -1,0 +1,92 @@
+/* src/styles/home.css */
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: white !important;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-image: url("../assets/latestImage.jpg"); /* Adjust the path as necessary */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.home-content {
+  /* background-color: rgba(255, 255, 255, 0.7);  */
+  padding: 40px;
+  margin-bottom: 300px;
+  border-radius: 10px;
+  max-width: 900px;
+  width: 100%;
+  /* margin: 100px; */
+}
+
+.home-buttons {
+  margin-top: 20px;
+}
+
+.home-button {
+  margin: 10px;
+  width: 150px;
+}
+
+.home-navBar {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Headline styling */
+.hero-title {
+  font-family: "Poppins", sans-serif; /* Or any modern font you like */
+  font-size: 3.5rem; /* Larger, modern sizing */
+  font-weight: 700;
+  color: #fff; /* White against dark background */
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle text shadow for readability */
+  margin-bottom: 20px;
+}
+
+/* Subtitle styling */
+.hero-subtitle {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
+  color: #f0f0f0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+}
+
+/* "Browse Stores" button:
+   Choose a color that stands out from the dark blue background */
+.browse-btn {
+  background-color: #419ef6; /* A bright, eye-catching blue */
+  color: #fff;
+  border: none;
+}
+.browse-btn:hover {
+  background-color: #2f61c2; /* Slightly darker on hover */
+}
+
+/* "Sign Up" button:
+     An outline or contrasting color so it doesn’t blend in */
+.signup-btn {
+  background-color: transparent;
+  color: #0f1c3c !important;
+  border: 2px solid #fff;
+  font-weight: bolder !important;
+}
+.signup-btn:hover {
+  background-color: #fff;
+  color: #fff !important; /* Dark navy or any deep color you like */
+}

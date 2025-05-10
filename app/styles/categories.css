@@ -1,0 +1,18 @@
+/* src/styles/categoryPage.css */
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .page-container {
+    /* background-color: #f8f9fa; */
+    min-height: 100vh;
+  }
+  
+  .content-wrap {
+    padding-bottom: 20px;
+  }
+  
