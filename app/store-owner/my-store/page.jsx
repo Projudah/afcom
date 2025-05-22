@@ -23,7 +23,7 @@ const StoreOwnerDashboard = () => {
     setStores([
       { id: 1, name: 'African Restaurant', type: 'Restaurant', description: 'Authentic African cuisine.' },
       { id: 2, name: 'African Hair Salon', type: 'Salon', description: 'Traditional African hairstyles.' },
-      { id: 2, name: 'African Hair Salon', type: 'Salon', description: 'Traditional African hairstyles.' },
+      { id: 3, name: 'African Hair Salon', type: 'Salon', description: 'Traditional African hairstyles.' },
     ]);
 
     setStoreStats({ totalStores: 100, totalCategories: 10, totalUsers: 1000 });

@@ -1,21 +1,49 @@
-// src/components/Dashboard.jsx
-import { Container, Row, Col, Card } from 'react-bootstrap';
-import { Line, Bar, Doughnut } from 'react-chartjs-2';
-import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, BarElement, Title, Tooltip, Legend, ArcElement } from 'chart.js';
+'use client';
 
-import StoreOwnerNavbar from './common/StoreOwnerHeader';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import React from 'react';
+
+// Import each component directly so its sub-components are available:
+import Container from 'react-bootstrap/Container';
+import Row       from 'react-bootstrap/Row';
+import Col       from 'react-bootstrap/Col';
+import Card      from 'react-bootstrap/Card';
+
+import { Line, Bar, Doughnut } from 'react-chartjs-2';
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  BarElement,
+  ArcElement,
+  Title,
+  Tooltip,
+  Legend
+} from 'chart.js';
+
+import StoreOwnerNavbar from '../../components/store-owner/common/StoreOwnerHeader';
 
 import '../../styles/dashboard.css';
 
-// Register Chart.js components
-ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, BarElement, ArcElement, Title, Tooltip, Legend);
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  BarElement,
+  ArcElement,
+  Title,
+  Tooltip,
+  Legend
+);
 
-const Dashboard = () => {
-    const ownerName = "John Doe"; // Replace with dynamic owner name
+export default function Dashboard() {
+  const ownerName = 'John Doe';
 
-  // Sample data for charts
   const visitsData = {
-    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+       labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
     datasets: [
       {
         label: 'Store Visits',
@@ -27,9 +55,8 @@ const Dashboard = () => {
       }
     ],
   };
-
-  const clicksData = {
-    labels: ['Product A', 'Product B', 'Product C', 'Product D', 'Product D', 'Product D', 'Product D', 'Product D', 'Product D'],
+  const clicksData = { 
+       labels: ['Product A', 'Product B', 'Product C', 'Product D', 'Product D', 'Product D', 'Product D', 'Product D', 'Product D'],
     datasets: [
       {
         label: 'Product Clicks',
@@ -37,10 +64,9 @@ const Dashboard = () => {
         backgroundColor: ['#007bff', '#28a745', '#ffc107', '#dc3545'],
       }
     ],
-  };
-
+   };
   const reviewsData = {
-    labels: ['Positive', 'Neutral', 'Negative'],
+ labels: ['Positive', 'Neutral', 'Negative'],
     datasets: [
       {
         label: 'Customer Reviews',
@@ -48,10 +74,9 @@ const Dashboard = () => {
         backgroundColor: ['#28a745', '#ffc107', '#dc3545'],
       }
     ],
-  };
-
+   };
   const conversionData = {
-    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+   labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
     datasets: [
       {
         label: 'Conversion Rate (%)',
@@ -60,10 +85,9 @@ const Dashboard = () => {
         backgroundColor: 'rgba(23, 162, 184, 0.2)',
       }
     ],
-  };
-
+   };
   const revenueData = {
-    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
     datasets: [
       {
         label: 'Revenue (in $)',
@@ -72,10 +96,9 @@ const Dashboard = () => {
         backgroundColor: 'rgba(255, 193, 7, 0.2)',
       }
     ],
-  };
-  
+   };
   const avgOrderValueData = {
-    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+   labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
     datasets: [
       {
         label: 'Average Order Value ($)',
@@ -84,10 +107,9 @@ const Dashboard = () => {
         backgroundColor: 'rgba(111, 66, 193, 0.2)',
       }
     ],
-  };
-  
+   };
   const returningCustomersData = {
-    labels: ['First-Time Customers', 'Returning Customers'],
+  labels: ['First-Time Customers', 'Returning Customers'],
     datasets: [
       {
         label: 'Customer Type',
@@ -95,8 +117,7 @@ const Dashboard = () => {
         backgroundColor: ['#ffc107', '#28a745'],
       }
     ],
-  };
-  
+   };
   const abandonedCartsData = {
     labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
     datasets: [
@@ -107,84 +128,89 @@ const Dashboard = () => {
         backgroundColor: 'rgba(220, 53, 69, 0.2)',
       }
     ],
-  };
-  
-  
+   };
+
   return (
     <div className="page-container">
-    <StoreOwnerNavbar ownerName={ownerName} />
-    <Container className='dashboard-main-container'>
-      <Row>
-        <Col md={12}>
-          <Card className='dashboard-card'>
-            <Card.Body>
-              <Card.Title>Store Visits</Card.Title>
-              <Line data={visitsData} />
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-      <Row>
-        <Col md={6}>
-          <Card className='dashboard-card'>
-            <Card.Body>
-              <Card.Title>Product Clicks</Card.Title>
-              <Bar data={clicksData} />
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col md={4}>
-          <Card className='dashboard-card'>
-            <Card.Body>
-              <Card.Title>Returning Customer Data</Card.Title>
-              <Doughnut data={returningCustomersData} />
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col md={5}>
-          <Card className='dashboard-card'>
-            <Card.Body>
-              <Card.Title>Customer Reviews</Card.Title>
-              <Doughnut data={reviewsData} />
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col md={4}>
-          <Card className='dashboard-card'>
-            <Card.Body>
-              <Card.Title>Conversion Data</Card.Title>
-              <Bar data={conversionData} />
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col md={4}>
-          <Card className='dashboard-card'>
-            <Card.Body>
-              <Card.Title>Revenue Data</Card.Title>
-              <Bar data={revenueData} />
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col md={4}>
-          <Card className='dashboard-card'>
-            <Card.Body>
-              <Card.Title>Average Order Data</Card.Title>
-              <Bar data={avgOrderValueData} />
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col md={4}>
-          <Card className='dashboard-card'>
-            <Card.Body>
-              <Card.Title>Abandoned Cart Data</Card.Title>
-              <Line data={abandonedCartsData} />
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
+      <StoreOwnerNavbar ownerName={ownerName} />
+
+      <Container className="dashboard-main-container">
+        <Row>
+          <Col md={12}>
+            <Card className="dashboard-card">
+              <Card.Body>
+                <Card.Title>Store Visits</Card.Title>
+                <Line data={visitsData} />
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+
+        <Row>
+          <Col md={6}>
+            <Card className="dashboard-card">
+              <Card.Body>
+                <Card.Title>Product Clicks</Card.Title>
+                <Bar data={clicksData} />
+              </Card.Body>
+            </Card>
+          </Col>
+
+          <Col md={4}>
+            <Card className="dashboard-card">
+              <Card.Body>
+                <Card.Title>Returning Customer Data</Card.Title>
+                <Doughnut data={returningCustomersData} />
+              </Card.Body>
+            </Card>
+          </Col>
+
+          <Col md={5}>
+            <Card className="dashboard-card">
+              <Card.Body>
+                <Card.Title>Customer Reviews</Card.Title>
+                <Doughnut data={reviewsData} />
+              </Card.Body>
+            </Card>
+          </Col>
+
+          <Col md={4}>
+            <Card className="dashboard-card">
+              <Card.Body>
+                <Card.Title>Conversion Data</Card.Title>
+                <Bar data={conversionData} />
+              </Card.Body>
+            </Card>
+          </Col>
+
+          <Col md={4}>
+            <Card className="dashboard-card">
+              <Card.Body>
+                <Card.Title>Revenue Data</Card.Title>
+                <Bar data={revenueData} />
+              </Card.Body>
+            </Card>
+          </Col>
+
+          <Col md={4}>
+            <Card className="dashboard-card">
+              <Card.Body>
+                <Card.Title>Average Order Data</Card.Title>
+                <Bar data={avgOrderValueData} />
+              </Card.Body>
+            </Card>
+          </Col>
+
+          <Col md={4}>
+            <Card className="dashboard-card">
+              <Card.Body>
+                <Card.Title>Abandoned Cart Data</Card.Title>
+                <Line data={abandonedCartsData} />
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
-};
-
-export default Dashboard;
+}

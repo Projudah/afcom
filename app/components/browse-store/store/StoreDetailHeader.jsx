@@ -99,13 +99,16 @@ const StoreDetailHeader = ({ store }) => {
             </Col>
             <Col md={3} className="align-items-center d-flex justify-content-end">
               <div className="storeDetails-button-group">
-                  <Button variant="primary" className="inquiry-button mr-2" onClick={() => setShowChatBox(!showChatBox)}>
-                    <FaComments className="storeDetails-button-icon" /> Chat with us
-                  </Button>
-                  <Button variant="primary" className="inquiry-button mr-2" onClick={handleRateUsModalShow}>
-                    <FaThumbsUp className="storeDetails-button-icon" /> Rate us
-                  </Button>
-                </div>
+                <Button variant="primary" className="inquiry-button mr-2" onClick={handleInquiryModalShow}>
+                  <FaEnvelope className="storeDetails-button-icon" /> Inquiry
+                </Button>
+                <Button variant="primary" className="inquiry-button mr-2" onClick={handleRateUsModalShow}>
+                  <FaThumbsUp className="storeDetails-button-icon" /> Rate us
+                </Button>
+                <Button variant="success" className="storeDetails-chat-button" onClick={() => setShowChatBox(!showChatBox)}>
+                  <FaComments className="storeDetails-button-icon" /> Chat with us
+                </Button>
+              </div> 
 
             </Col>
           </Row>
@@ -131,14 +134,14 @@ export default StoreDetailHeader;
 // Any changes made are stored here
 
 
-              {/* <div className="storeDetails-button-group">
-                <Button variant="primary" className="inquiry-button mr-2" onClick={handleInquiryModalShow}>
-                  <FaEnvelope className="storeDetails-button-icon" /> Inquiry
-                </Button>
-                <Button variant="primary" className="inquiry-button mr-2" onClick={handleRateUsModalShow}>
-                  <FaThumbsUp className="storeDetails-button-icon" /> Rate us
-                </Button>
-                <Button variant="success" className="storeDetails-chat-button" onClick={() => setShowChatBox(!showChatBox)}>
-                  <FaComments className="storeDetails-button-icon" /> Chat with us
-                </Button>
-              </div> */}
+
+
+  {/*
+               <div className="storeDetails-button-group">
+                  <Button variant="primary" className="inquiry-button mr-2" onClick={() => setShowChatBox(!showChatBox)}>
+                    <FaComments className="storeDetails-button-icon" /> Chat with us
+                  </Button>
+                  <Button variant="primary" className="inquiry-button mr-2" onClick={handleRateUsModalShow}>
+                    <FaThumbsUp className="storeDetails-button-icon" /> Rate us
+                  </Button>
+                </div>*/}

@@ -9,10 +9,10 @@ const AdminStoreRequestsPage = () => {
   const [requests, setRequests] = useState([
     { id: 1, storeName: 'Example Store 1', storeType: 'Restaurant', storeCategory: 'Food', email: 'example1@example.com', phone: '123-456-7890', description: 'A great restaurant', businessType: 'products', files: ['file1.pdf', 'file2.jpg'] },
     { id: 2, storeName: 'Example Store 2', storeType: 'Salon', storeCategory: 'Beauty', email: 'example2@example.com', phone: '123-456-7891', description: 'A wonderful salon', businessType: 'services', files: ['file3.pdf'] },
-    { id: 1, storeName: 'Example Store 1', storeType: 'Restaurant', storeCategory: 'Food', email: 'example1@example.com', phone: '123-456-7890', description: 'A great restaurant', businessType: 'products', files: ['file1.pdf', 'file2.jpg'] },
-    { id: 2, storeName: 'Example Store 2', storeType: 'Salon', storeCategory: 'Beauty', email: 'example2@example.com', phone: '123-456-7891', description: 'A wonderful salon', businessType: 'services', files: ['file3.pdf'] },
-    { id: 1, storeName: 'Example Store 1', storeType: 'Restaurant', storeCategory: 'Food', email: 'example1@example.com', phone: '123-456-7890', description: 'A great restaurant', businessType: 'products', files: ['file1.pdf', 'file2.jpg'] },
-    { id: 2, storeName: 'Example Store 2', storeType: 'Salon', storeCategory: 'Beauty', email: 'example2@example.com', phone: '123-456-7891', description: 'A wonderful salon', businessType: 'services', files: ['file3.pdf'] }
+    { id: 3, storeName: 'Example Store 1', storeType: 'Restaurant', storeCategory: 'Food', email: 'example1@example.com', phone: '123-456-7890', description: 'A great restaurant', businessType: 'products', files: ['file1.pdf', 'file2.jpg'] },
+    { id: 4, storeName: 'Example Store 2', storeType: 'Salon', storeCategory: 'Beauty', email: 'example2@example.com', phone: '123-456-7891', description: 'A wonderful salon', businessType: 'services', files: ['file3.pdf'] },
+    { id: 5, storeName: 'Example Store 1', storeType: 'Restaurant', storeCategory: 'Food', email: 'example1@example.com', phone: '123-456-7890', description: 'A great restaurant', businessType: 'products', files: ['file1.pdf', 'file2.jpg'] },
+    { id: 6, storeName: 'Example Store 2', storeType: 'Salon', storeCategory: 'Beauty', email: 'example2@example.com', phone: '123-456-7891', description: 'A wonderful salon', businessType: 'services', files: ['file3.pdf'] }
 
 
 ]);

@@ -1,6 +1,14 @@
-'use client'
+'use client';
+
 import React, { useState } from 'react';
-import { Card, CardContent, Typography, Button, Box, IconButton } from '@mui/material';
+import {
+  Card,
+  CardContent,
+  Typography,
+  Button,
+  Box,
+  IconButton,
+} from '@mui/material';
 import Link from 'next/link';
 import { FaTrash } from 'react-icons/fa';
 import DeleteConfirmationModal from './store-owner/common/DeleteConfirmationModal';
@@ -13,12 +21,10 @@ const StoreList = ({ stores, deleteStore }) => {
     setStoreIdToDelete(storeId);
     setOpen(true);
   };
-
   const handleClose = () => {
     setOpen(false);
     setStoreIdToDelete(null);
   };
-
   const handleConfirm = () => {
     deleteStore(storeIdToDelete);
     handleClose();
@@ -26,14 +32,16 @@ const StoreList = ({ stores, deleteStore }) => {
 
   return (
     <Box>
-      {stores.map((store) => (
-        <Card key={store.id} sx={{ mb: 2 }}>
+      {stores.map((store, index) => (
+        // ← combine id + index so keys are guaranteed unique
+        <Card key={`${store.id}-${index}`} sx={{ mb: 2 }}>
           <CardContent>
             <Typography variant="h5">{store.name}</Typography>
             <Typography variant="body2" color="textSecondary">
               {store.type}
             </Typography>
             <Typography variant="body1">{store.description}</Typography>
+
             <Box
               sx={{
                 display: 'flex',
@@ -43,22 +51,15 @@ const StoreList = ({ stores, deleteStore }) => {
               }}
             >
               <Box sx={{ display: 'flex', gap: 2 }}>
-                <Button
-                  component={Link}
-                  to={`/store/${store.id}`}
-                  variant="contained"
-                >
-                  View Details
+                {/* Next.js Link uses href, not 'to' */}
+                <Button component={Link} href={`/store/${store.id}`} variant="contained">
+                  Edit Store
                 </Button>
-                <Button
-                  component={Link}
-                  to="/message-center"
-                  variant="contained"
-                  color="secondary"
-                >
-                  Message center
-                </Button>
+                {/* <Button component={Link} href="/message-center" variant="contained" color="secondary">
+                  Message Center
+                </Button> */}
               </Box>
+
               <IconButton color="error" onClick={() => handleOpen(store.id)}>
                 <FaTrash />
               </IconButton>
@@ -66,7 +67,12 @@ const StoreList = ({ stores, deleteStore }) => {
           </CardContent>
         </Card>
       ))}
-      <DeleteConfirmationModal open={open} handleClose={handleClose} handleConfirm={handleConfirm} />
+
+      <DeleteConfirmationModal
+        open={open}
+        handleClose={handleClose}
+        handleConfirm={handleConfirm}
+      />
     </Box>
   );
 };

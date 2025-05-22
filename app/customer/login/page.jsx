@@ -4,8 +4,8 @@ import { useRouter } from 'next/navigation';
 import { Form, Button, Container, Alert, Row, Col, ButtonGroup, Modal } from 'react-bootstrap';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import Link from 'next/link';
-import background from '../../../assets/latestImage.jpg';
-import '../../../styles/authentication.css';
+import background from '../../assets/latestImage.jpg';
+import '../../styles/authentication.css';
 
 const CustomerLogin = () => {
   const [loginMode, setLoginMode] = useState('password'); // 'password' or 'code'
@@ -214,7 +214,7 @@ const CustomerLogin = () => {
                 </p>
                 <p>
                   Don't have an account?{" "}
-                  <Link to="/customer/sign-up" className="auth-link">
+                  <Link href="/customer/sign-up" className="auth-link">
                     Sign Up
                   </Link>
                 </p>

@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import { Button, Form, Modal } from 'react-bootstrap';
 import { useRouter } from 'next/navigation';
 import { FaPhoneAlt, FaEnvelope, FaCommentDots } from 'react-icons/fa';
-import BrowseNavbar from '../../common/BrowseStoreHeader';
-import '../../../../styles/helpModal.css'; // Ensure this file exists and has the correct styles
+import BrowseNavbar from '../components/browse-store/common/BrowseStoreHeader';
+import '../styles/helpModal.css'; // Ensure this file exists and has the correct styles
 
 const CustomerSupport = () => {
   const router = useRouter();

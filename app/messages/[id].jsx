@@ -15,7 +15,7 @@ const MessageThread = ({ thread }) => {
   return (
     <div>
       <h1>Message Thread</h1>
-      <Link to="/messages">Back to Message Center</Link>
+      <Link href="/messages">Back to Message Center</Link>
       <div>
         {thread && thread.map(msg => (
           <div key={msg.id}>

@@ -60,7 +60,7 @@ const CategoryPopularStores = ({ categories }) => {
                   <Card.Body>
                     <Card.Title>{category.name}</Card.Title>
                     {/* Use Link for navigation */}
-                    <Button variant="primary"  to={`/category/${category.name.toLowerCase()}`}>
+                    <Button variant="primary"  href={`/category/${category.name.toLowerCase()}`}>
                       Visit {category.name}
                     </Button>
                   </Card.Body>

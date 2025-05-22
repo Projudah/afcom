@@ -1,10 +1,11 @@
 'use client'
 import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'next/navigation';
+import Link from 'next/link';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
-import BrowseNavbar from '../components/browse-store/common/BrowseStoreHeader';
-import Footer from '../components/browse-store/common/BrowseStoreFooter';
-import '../styles/categories.css';
+import BrowseNavbar from '../../components/browse-store/common/BrowseStoreHeader';
+import Footer from '../../components/browse-store/common/BrowseStoreFooter';
+import '../../styles/categories.css';
 
 
 const CategoryPage = () => {
@@ -14,10 +15,10 @@ const CategoryPage = () => {
   useEffect(() => {
     // Simulate fetching stores by category from backend
     const allStores = [
-      { id: 1, name: 'African Restaurant', type: 'Restaurant', category: 'restaurants', description: 'Authentic African cuisine.', image: 'path/to/restaurant.jpg' },
-      { id: 1, name: 'African Restaurant', type: 'Restaurant', category: 'restaurants', description: 'Authentic African cuisine.', image: 'path/to/restaurant.jpg' },
-      { id: 1, name: 'African Restaurant', type: 'Restaurant', category: 'restaurants', description: 'Authentic African cuisine.', image: 'path/to/restaurant.jpg' },
-      { id: 2, name: 'African Hair Salon', type: 'Salon', category: 'salons', description: 'Traditional African hairstyles.', image: 'path/to/salon.jpg' },
+      { id: 1, name: 'African Restaurant', type: 'Restaurant', category: 'restaurants', description: 'Authentic African cuisine.', image: 'https://via.placeholder.com/300x200?text=Restaurant' },
+      { id: 2, name: 'African Restaurant', type: 'Restaurant', category: 'restaurants', description: 'Authentic African cuisine.', image: 'https://via.placeholder.com/300x200?text=Restaurant' },
+      { id: 3, name: 'African Restaurant', type: 'Restaurant', category: 'restaurants', description: 'Authentic African cuisine.', image: 'https://via.placeholder.com/300x200?text=Restaurant' },
+      { id: 4, name: 'African Hair Salon', type: 'Salon', category: 'salons', description: 'Traditional African hairstyles.', image: 'path/to/salon.jpg' },
       // Add more stores with appropriate categories
     ];
 
@@ -39,7 +40,7 @@ const CategoryPage = () => {
                   <Card.Body>
                     <Card.Title>{store.name}</Card.Title>
                     <Card.Text>{store.description}</Card.Text>
-                    <Button variant="primary" as={Link} to={`/store/${store.id}`}>
+                    <Button variant="primary" as={Link} href={`/store/${store.id}`}>
                       Enter Store
                     </Button>
                   </Card.Body>

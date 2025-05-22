@@ -61,7 +61,7 @@ const PopularStores = ({ stores }) => {
                   <Card.Body>
                     <Card.Title>{store.name}</Card.Title>
                     <Card.Text>{store.description}</Card.Text>
-                    <Button variant="primary"  to={`/store/${store.id}`}>
+                    <Button variant="primary"  href={`/store/${store.id}`}>
                       Visit Store
                     </Button>
                   </Card.Body>

@@ -75,7 +75,7 @@
 
 //               <div className="mt-3 text-center">
 //                 <span>Already have an account? </span>
-//                 <Link to="/customer/login" className="login-link">Login</Link>
+//                 <Link href="/customer/login" className="login-link">Login</Link>
 //               </div>
 
 //               <div className="mt-3 text-center">

@@ -1,4 +1,5 @@
 // src/components/StoreStatistics.jsx
+'use client';
 import React from 'react';
 import { Grid, Typography, Box } from '@mui/material';
 import '../../../styles/browseStoreLayout.css';

@@ -1,28 +1,28 @@
-// src/pages/StoreDetail.jsx
-import React, { useState, useEffect } from 'react';
+'use client';
+
+import React, { useState, useEffect, use } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { FaTrash, FaExclamationTriangle } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 
-import BrowseNavbar from '../components/browse-store/common/BrowseStoreHeader';
-import StoreDetailHeader from '../components/browse-store/store/StoreDetailHeader';
-import SubNavbar from '../components/browse-store/store/StoreNavBar';
-import ReviewForm from '../components/browse-store/store/navBar-items/ReviewForm';
-import ReviewList from '../components/browse-store/store/navBar-items/ReviewList';
-import AddProductForm from '../components/browse-store/store/navBar-items/AddProductForm';
-import EditAboutUsForm from '../components/browse-store/store/navBar-items/AddAboutUsForm';
-import EditPoliciesForm from '../components/browse-store/store/navBar-items/AddPoliciesForm';
-import AddDiscountForm from '../components/browse-store/store/navBar-items/AddDiscountForm'; // New component
-import DiscountDetailModal from '../components/browse-store/store/navBar-items/DiscountDetailModal';
-import logo from '../assets/company-logos/logo.png';
-import '../styles/storeDetails.css';
+import BrowseNavbar from '../../components/browse-store/common/BrowseStoreHeader';
+import StoreDetailHeader from '../../components/browse-store/store/StoreDetailHeader';
+import SubNavbar from '../../components/browse-store/store/StoreNavBar';
+import ReviewForm from '../../components/browse-store/store/navBar-items/ReviewForm';
+import ReviewList from '../../components/browse-store/store/navBar-items/ReviewList';
+import AddProductForm from '../../components/browse-store/store/navBar-items/AddProductForm';
+import EditAboutUsForm from '../../components/browse-store/store/navBar-items/AddAboutUsForm';
+import EditPoliciesForm from '../../components/browse-store/store/navBar-items/AddPoliciesForm';
+import AddDiscountForm from '../../components/browse-store/store/navBar-items/AddDiscountForm';
+import DiscountDetailModal from '../../components/browse-store/store/navBar-items/DiscountDetailModal';
+import logo from '../../assets/company-logos/logo.png';
+import '../../styles/storeDetails.css';
 
-const StoreDetail = () => {
-    const router = useRouter();
-    const { id } = router.query;
+const StoreDetail = ({ params }) => {
+  const { id } = use(params);
+
   const [store, setStore] = useState(null);
   const [activeTab, setActiveTab] = useState('products');
   const [cartItems, setCartItems] = useState([]);
@@ -30,16 +30,15 @@ const StoreDetail = () => {
   const [productModalShow, setProductModalShow] = useState(false);
   const [aboutModalShow, setAboutModalShow] = useState(false);
   const [policiesModalShow, setPoliciesModalShow] = useState(false);
-  const [discountModalShow, setDiscountModalShow] = useState(false); // New state for discount modal
+  const [discountModalShow, setDiscountModalShow] = useState(false);
   const [discountDetailModalShow, setDiscountDetailModalShow] = useState(false);
   const [selectedDiscount, setSelectedDiscount] = useState(null);
 
   useEffect(() => {
-    // Fetch store details from the backend using id
     setStore({
-      id: id,
+      id,
       name: 'KENOS AFRICAN SHOP',
-      logo: logo,
+      logo,
       location: 'Kasapa, New Bortianor, Accra, Greater Accra, Ghana',
       phone: ['+233 55 415 5415', '+233 20 123 4567'],
       email: 'poweronchristway@gmail.com',
@@ -59,13 +58,13 @@ const StoreDetail = () => {
       },
       reviews: 120,
       products: [
-        { id: 1, name: 'Chewing Sticks', price: '$4.2', description: 'Authentic African chewing sticks.', image: 'path/to/chewing-sticks.png' },
-        { id: 2, name: 'Natural Chewing Sponge', price: '$13.9', description: 'Raw African black soap.', image: 'path/to/chewing-sponge.png' },
-        { id: 3, name: 'Natural Raw African Black Soap', price: '$13.9', description: 'Natural African chewing sponge.', image: 'path/to/black-soap.png' },
-        { id: 4, name: 'Neem Leaf Powder 16 oz', price: '$27.7', description: 'Authentic African chewing sticks.', image: 'path/to/neem-leaf-powder.png' },
-        { id: 5, name: 'Chewing Sticks', price: '$4.2', description: 'Authentic African chewing sticks.', image: 'path/to/chewing-sticks.png' },
-        { id: 6, name: 'Natural Chewing Sponge', price: '$13.9', description: 'Natural African chewing sponge.', image: 'path/to/chewing-sponge.png' },
-        { id: 7, name: 'Natural Raw African Black Soap', price: '$13.9', description: 'Raw African black soap.', image: 'path/to/black-soap.png' },
+        { id: 1, name: 'Chewing Sticks', price: '$4.2', description: 'Authentic African chewing sticks.', image: 'https://via.placeholder.com/300x200?text=Restaurant' },
+        { id: 2, name: 'Natural Chewing Sponge', price: '$13.9', description: 'Raw African black soap.', image: 'https://via.placeholder.com/300x200?text=Restaurant' },
+        { id: 3, name: 'Natural Raw African Black Soap', price: '$13.9', description: 'Natural African chewing sponge.', image: 'https://via.placeholder.com/300x200?text=Restaurant' },
+        { id: 4, name: 'Neem Leaf Powder 16 oz', price: '$27.7', description: 'Authentic African chewing sticks.', image: 'https://via.placeholder.com/300x200?text=Restaurant' },
+        { id: 5, name: 'Chewing Sticks', price: '$4.2', description: 'Authentic African chewing sticks.', image: 'https://via.placeholder.com/300x200?text=Restaurant' },
+        { id: 6, name: 'Natural Chewing Sponge', price: '$13.9', description: 'Natural African chewing sponge.', image: 'https://via.placeholder.com/300x200?text=Restaurant' },
+        { id: 7, name: 'Natural Raw African Black Soap', price: '$13.9', description: 'Raw African black soap.', image: 'https://via.placeholder.com/300x200?text=Restaurant' },
       ],
       services: [
         { id: 1, name: 'Hair Braiding', price: '$50', description: 'Professional hair braiding services.' },
@@ -78,19 +77,18 @@ const StoreDetail = () => {
       ],
     });
 
-    // Example reviews
     setReviews([
       {
         id: 1,
         rating: 5,
         comment: 'Great products and excellent customer service!',
-        image: 'path/to/example-image1.png',
+        image: 'https://via.placeholder.com/300x200?text=Restaurant',
       },
       {
         id: 2,
         rating: 4,
         comment: 'Loved the quality of the products, will definitely buy again.',
-        image: 'path/to/example-image2.png',
+        image: 'https://via.placeholder.com/300x200?text=Restaurant',
       },
       {
         id: 3,
@@ -101,64 +99,43 @@ const StoreDetail = () => {
     ]);
   }, [id]);
 
-  // Functions for products, about, policies, reviews (omitted for brevity)
-  const addToCart = (product) => {
+  const addToCart = product => {
     setCartItems([...cartItems, product]);
     alert(`${product.name} added to cart!`);
   };
 
-  const addProduct = (product) => {
-    setStore(prevStore => ({
-      ...prevStore,
-      products: [...prevStore.products, product]
+  const addProduct = product => {
+    setStore(prev => ({ ...prev, products: [...prev.products, product] }));
+  };
+
+  const deleteProduct = productId => {
+    setStore(prev => ({
+      ...prev,
+      products: prev.products.filter(p => p.id !== productId),
     }));
   };
 
-  const deleteProduct = (productId) => {
-    setStore(prevStore => ({
-      ...prevStore,
-      products: prevStore.products.filter(product => product.id !== productId)
+  const markAsSoldOut = productId => {
+    setStore(prev => ({
+      ...prev,
+      products: prev.products.map(p =>
+        p.id === productId ? { ...p, soldOut: true } : p
+      ),
     }));
   };
 
-  const markAsSoldOut = (productId) => {
-    setStore(prevStore => ({
-      ...prevStore,
-      products: prevStore.products.map(product =>
-        product.id === productId ? { ...product, soldOut: true } : product
-      )
-    }));
+  const updateAbout = about => {
+    setStore(prev => ({ ...prev, about }));
   };
 
-  const updateAbout = (about) => {
-    setStore(prevStore => ({
-      ...prevStore,
-      about
-    }));
+  const updatePolicies = policies => {
+    setStore(prev => ({ ...prev, policies }));
   };
 
-  const updatePolicies = (policies) => {
-    setStore(prevStore => ({
-      ...prevStore,
-      policies
-    }));
-  };
-
-  const addReview = (review) => {
-    setReviews([...reviews, review]);
-  };
-
-  const deleteReview = (reviewId) => {
-    setReviews(reviews.filter(review => review.id !== reviewId));
-  };
-
-  // New function to add a discount
-  const addDiscount = (discount) => {
-    setStore(prevStore => ({
-      ...prevStore,
-      discounts: [...prevStore.discounts, discount]
-    }));
-  };
+  const addReview = review => setReviews([...reviews, review]);
+  const deleteReview = reviewId => setReviews(r => r.filter(rw => rw.id !== reviewId));
+  const addDiscount = discount =>
+    setStore(prev => ({ ...prev, discounts: [...prev.discounts, discount] }));
 
   if (!store) return <div>Loading...</div>;
 
@@ -185,10 +162,12 @@ const StoreDetail = () => {
                       <h5>{product.name}</h5>
                       <p>{product.price}</p>
                       <p>{product.description}</p>
-                      <Button variant="link"  to={`/product/${product.id}`}>
+                      <Button variant="link" as={Link} href={`/product/${product.id}`}>
                         View Details
                       </Button>
-                      <Button variant="success" onClick={() => addToCart(product)}>Add to Cart</Button>
+                      <Button variant="success" onClick={() => addToCart(product)}>
+                        Add to Cart
+                      </Button>
                       {product.soldOut && <span className="sold-out-tag">Sold Out</span>}
                       <div className="product-actions">
                         <Button className="markSoldOut-edit" variant="danger" onClick={() => deleteProduct(product.id)}>
@@ -207,7 +186,6 @@ const StoreDetail = () => {
             </Row>
           </div>
         );
-
       case 'about':
         return (
           <div>
@@ -311,12 +289,13 @@ const StoreDetail = () => {
     }
   };
 
-  return (
+
+   return (
     <div>
       <BrowseNavbar />
       <Container className="store-detail-container">
         <StoreDetailHeader store={store} />
-        <SubNavbar activeKey={activeTab} onSelect={(k) => setActiveTab(k)} />
+        <SubNavbar activeKey={activeTab} onSelect={k => setActiveTab(k)} />
         <Row>
           <Col md={3}>
             <div className="sidebar">
@@ -333,18 +312,44 @@ const StoreDetail = () => {
               </ul>
             </div>
           </Col>
-          <Col md={9}>
-            {renderContent()}
-          </Col>
+          <Col md={9}>{renderContent()}</Col>
         </Row>
-        <AddProductForm show={productModalShow} handleClose={() => setProductModalShow(false)} addProduct={addProduct} />
-        <EditAboutUsForm show={aboutModalShow} handleClose={() => setAboutModalShow(false)} about={store.about} updateAbout={updateAbout} />
-        <EditPoliciesForm show={policiesModalShow} handleClose={() => setPoliciesModalShow(false)} policies={store.policies} updatePolicies={updatePolicies} />
-        <AddDiscountForm show={discountModalShow} handleClose={() => setDiscountModalShow(false)} addDiscount={addDiscount} products={store.products} services={store.services} />
-        <DiscountDetailModal show={discountDetailModalShow} handleClose={() => setDiscountDetailModalShow(false)} discount={selectedDiscount} products={store.products} services={store.services} addToCart={addToCart}/>
+
+        <AddProductForm
+          show={productModalShow}
+          handleClose={() => setProductModalShow(false)}
+          addProduct={addProduct}
+        />
+        <EditAboutUsForm
+          show={aboutModalShow}
+          handleClose={() => setAboutModalShow(false)}
+          about={store.about}
+          updateAbout={updateAbout}
+        />
+        <EditPoliciesForm
+          show={policiesModalShow}
+          handleClose={() => setPoliciesModalShow(false)}
+          policies={store.policies}
+          updatePolicies={updatePolicies}
+        />
+        <AddDiscountForm
+          show={discountModalShow}
+          handleClose={() => setDiscountModalShow(false)}
+          addDiscount={addDiscount}
+          products={store.products}
+          services={store.services}
+        />
+        <DiscountDetailModal
+          show={discountDetailModalShow}
+          handleClose={() => setDiscountDetailModalShow(false)}
+          discount={selectedDiscount}
+          products={store.products}
+          services={store.services}
+          addToCart={addToCart}
+        />
       </Container>
     </div>
   );
-};
+}
 
 export default StoreDetail;

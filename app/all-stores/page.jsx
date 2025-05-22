@@ -1,14 +1,25 @@
+'use client';
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import { useRouter } from 'next/navigation';
 
 // NavBar and footer
-import BrowseNavbar from '../common/BrowseStoreHeader';
-import Footer from '../common/BrowseStoreFooter';
-// NavBar and footer
+import BrowseNavbar from '../components/browse-store/common/BrowseStoreHeader';
+import Footer from '../components/browse-store/common/BrowseStoreFooter';
 
 
 const AllStores = () => {
+
+    // ← Here’s the only addition: define your stores locally
+  const stores = [
+    { id: 3, name: 'New African Restaurant', description: 'Authentic African cuisine.', image: 'path/to/african-restaurant.jpg' },
+    { id: 4, name: 'New African Hair Salon', description: 'Traditional African hairstyles.', image: 'path/to/african-hair-salon.jpg' },
+    { id: 5, name: 'Popular African Clothing Store', description: 'Beautiful African fashion.', image: 'path/to/african-clothing-store.jpg' },
+    { id: 6, name: 'Popular African Market', description: 'Fresh produce and groceries.', image: 'path/to/african-market.jpg' },
+    // …add more if you like
+  ];
+
+
   const router = useRouter();
   // const location = useLocation();
   // const { stores } = location.state || {}; // Get stores from location state
@@ -27,8 +38,8 @@ const AllStores = () => {
       </Button>
       <h2 className="section-title">All Stores</h2>
       <Row>
-        {stores.map((store) => (
-          <Col md={4} key={store.id} className="mb-4">
+        {stores.map((store, idx) => (
+          <Col md={4} key={`${store.id}-${idx}`} className="mb-4">
             <Card>
               <Card.Img variant="top" src={store.image} />
               <Card.Body>

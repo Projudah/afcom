@@ -3,8 +3,8 @@
 import { useState } from 'react';
 import { Container, Button, Form, Alert, InputGroup } from 'react-bootstrap';
 import { useRouter } from 'next/navigation';
-import BrowseNavbar from '../../common/BrowseStoreHeader';
-import '../../../../styles/helpModal.css'; // Ensure this file exists and has the correct styles
+import BrowseNavbar from '../components/browse-store/common/BrowseStoreHeader';
+import '../styles/helpModal.css'; // Ensure this file exists and has the correct styles
 
 const ComplaintPage = () => {
   const router = useRouter();

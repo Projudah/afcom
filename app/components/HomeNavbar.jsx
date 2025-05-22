@@ -22,7 +22,7 @@ const Navbar = () => {
         <Link href="/store-owner/login" passHref>
           <Button color="inherit">Store Owner</Button>
         </Link>
-        <Link href="/create-store" passHref>
+        <Link href="/blog" passHref>
           <Button color="inherit">Blog</Button>
         </Link>
       </Toolbar>

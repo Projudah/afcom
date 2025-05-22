@@ -1,4 +1,5 @@
 // src/components/LatestStoresCarousel.jsx
+'use client';
 import React from 'react';
 import { Carousel, Button, Container } from 'react-bootstrap';
 import { Grow } from '@mui/material';

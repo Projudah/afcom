@@ -71,7 +71,7 @@
 //                 </Button>
 //                 </div>
 //                 <div className="mt-3 text-center">
-//                 <Link to="/store-owner/forgot-password" className="forgot-password-link">Forgot Password?</Link>
+//                 <Link href="/store-owner/forgot-password" className="forgot-password-link">Forgot Password?</Link>
 //                 </div>
 //             </Form>
 //           </div>

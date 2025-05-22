@@ -210,7 +210,7 @@ const ShowAllItemsModal = ({ show, handleClose, items, title, type }) => {
             <Typography variant="body2" color="textSecondary">
               {item.category || item.description}
             </Typography>
-            <Button variant="primary"  to={`/store/${item.id}`} sx={{ mt: 2 }}>
+            <Button variant="primary"  href={`/store/${item.id}`} sx={{ mt: 2 }}>
               Visit Store
             </Button>
           </>
@@ -223,7 +223,7 @@ const ShowAllItemsModal = ({ show, handleClose, items, title, type }) => {
               {item.storeName}
             </Typography>
             <Typography variant="body1">{item.price}</Typography>
-            <Button variant="primary"  to={`/product/${item.id}`} sx={{ mt: 2 }}>
+            <Button variant="primary"  href={`/product/${item.id}`} sx={{ mt: 2 }}>
               View Product
             </Button>
           </>
@@ -251,7 +251,7 @@ const ShowAllItemsModal = ({ show, handleClose, items, title, type }) => {
                 </div>
               </div>
             </div>
-            <Button variant="primary"  to={`/store/${item.id}`} sx={{ mt: 2 }}>
+            <Button variant="primary"  href={`/store/${item.id}`} sx={{ mt: 2 }}>
               Visit Store
             </Button>
           </>

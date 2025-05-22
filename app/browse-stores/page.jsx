@@ -121,7 +121,7 @@ const BrowseStores = () => {
        
       },
       {
-        id: 1,
+        id: 2,
         name: "Suya bistro",
         category: "Restaurant",
         image: 'path/to/toprated1.jpg',
@@ -130,7 +130,7 @@ const BrowseStores = () => {
        
       },
       {
-        id: 1,
+        id: 3,
         name: "Suya bistro",
         category: "Restaurant",
         image: 'path/to/toprated1.jpg',
@@ -139,7 +139,7 @@ const BrowseStores = () => {
        
       },
       {
-        id: 1,
+        id: 4,
         name: "Suyaaaa",
         category: "Restaurant",
         image: 'path/to/toprated1.jpg',
@@ -148,7 +148,7 @@ const BrowseStores = () => {
        
       },
       {
-        id: 1,
+        id: 5,
         name: "Suya",
         category: "Restaurant",
         image: 'path/to/toprated1.jpg',
@@ -157,7 +157,7 @@ const BrowseStores = () => {
        
       },
       {
-        id: 1,
+        id: 6,
         name: "bistro",
         category: "Restaurant",
         image: 'path/to/toprated1.jpg',
@@ -274,7 +274,7 @@ const BrowseStores = () => {
                 boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
                 transition: 'transform 0.3s ease',
               }}
-              onClick={() => router.push('/browse-stores/all-stores', { state: { stores: allStores } })}
+              onClick={() => router.push('/all-stores', { state: { stores: allStores } })}
               onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
               onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
             >
