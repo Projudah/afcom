@@ -8,6 +8,7 @@ import { FaTrash, FaExclamationTriangle } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import BrowseNavbar from '../../components/browse-store/common/BrowseStoreHeader';
+import Footer from '../../components/browse-store/common/BrowseStoreFooter';
 import StoreDetailHeader from '../../components/browse-store/store/StoreDetailHeader';
 import SubNavbar from '../../components/browse-store/store/StoreNavBar';
 import ReviewForm from '../../components/browse-store/store/navBar-items/ReviewForm';
@@ -348,6 +349,7 @@ const StoreDetail = ({ params }) => {
           addToCart={addToCart}
         />
       </Container>
+      <Footer />
     </div>
   );
 }

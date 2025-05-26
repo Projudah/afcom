@@ -1,6 +1,7 @@
 /* src/styles/footer.css */
 
 .footer {
+    margin-top: 80px !important;
     background-color: #f8f9fa;
     color: #343a40;
     padding: 20px 0;

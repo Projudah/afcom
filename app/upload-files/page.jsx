@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { Form, Button, Container } from 'react-bootstrap';
 import { useRouter } from 'next/navigation';
-import '../../styles/uploadFiles.css';
+import '../styles/uploadFiles.css';
 
 const UploadFiles = () => {
     const [selectedFiles, setSelectedFiles] = useState([]);
