@@ -10,6 +10,7 @@ import styles from './sidebar.module.css';
 
 const menuItems = [
   { to: '/store-owner/dashboard', label: 'Dashboard' },
+   { to: '/customer-enquiry',  label: 'Customer Enquiries' },
   { to: '/store-owner/my-store',  label: 'My Store' },
   //  { to: '/store-owner/edit-store', label: 'Edit Store Information' },  For security reasons, i have decided to remove this link in case a verified store owner wants to edit their store information without proper authentication.
   { to: '/store-owner/invoice',   label: 'My Invoice' },

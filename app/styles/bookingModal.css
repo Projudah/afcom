@@ -1,0 +1,224 @@
+.btn-primary{
+    background-color: #007bff !important;
+    border-color: #007bff !important;
+}
+
+.btn-secondary{
+    cursor: pointer  !important;
+    background-color: #24a05c !important;
+    border-color:#24a05c !important;
+}
+
+.btn-primary:hover{
+    background-color: #0056b3 !important;
+    border-color: #0056b3 !important;
+}
+.btn-secondary:hover{
+    background-color: #013d3b !important;
+    border-color: #013d3b !important;
+}
+
+.btn{
+    cursor: pointer !important;
+}
+
+/* bookingModal.css */
+
+/* wrap both date-time pickers side by side */
+.datetime-row {
+  display: flex;
+  gap: 1rem;
+}
+.datetime-row .form-group {
+  flex: 1;
+}
+
+/* style the labels */
+.booking-modal .form-label {
+  font-weight: 600;
+  color: #0422c9; /* Material purple */
+  margin-bottom: 0.5rem;
+}
+
+/* elevate the inputs */
+.datetime-row .form-control[type="datetime-local"] {
+  background: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.1s ease;
+}
+
+/* hover / focus states */
+.datetime-row .form-control[type="datetime-local"]:hover {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+.datetime-row .form-control[type="datetime-local"]:focus {
+  outline: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transform: translateY(-1px);
+}
+
+/* make sure the little dropdown arrow is visible */
+.datetime-row .form-control::-webkit-calendar-picker-indicator {
+  filter: invert(20%) sepia(80%) saturate(300%) hue-rotate(260deg);
+}
+
+/* if you want a bit more “Material” flair, add a ripple on click */
+.datetime-row .form-control[type="datetime-local"]:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+
+
+/* bookingModal.css */
+
+/* Make sure this wraps the React-Bootstrap modal */
+.modal-content {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+/* Header */
+.modal-header {
+  background: linear-gradient(45deg, #007bff, #0056b3);
+  border-bottom: none;
+  padding: 1rem 1.5rem;
+}
+.modal-header .modal-title {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+.modal-header .btn-close {
+  filter: invert(100%);
+  opacity: 0.8;
+}
+.modal-header .btn-close:hover {
+  opacity: 1;
+}
+
+/* Body */
+.modal-body {
+  padding: 1.5rem;
+}
+.modal-body p {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  color: #424242;
+}
+.modal-body strong {
+  color: #0056b3;
+}
+
+/* Fieldset styling */
+.modal-body fieldset {
+  border: none;
+  margin-bottom: 1.5rem;
+}
+.modal-body legend {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #0056b3;
+  margin-bottom: 0.5rem;
+}
+
+/* Custom radio buttons */
+.form-check {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.form-check-input {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: 0.5rem;
+}
+.form-check-label {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* Buttons row */
+.modal-body .btn {
+  border-radius: 6px;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: all 0.2s;
+}
+.modal-body .btn-primary {
+  background: linear-gradient(90deg, #0F1C3C, #2F61C2) !important;
+  border: none !important;
+  color: #fff !important;
+}
+.modal-body .btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.modal-body .btn-success {
+  background: #388e3c !important;
+  border: none !important;
+  color: #fff !important;
+}
+.modal-body .btn-success:hover {
+  background: #2e7d32 !important;
+}
+
+/* Pending notice */
+.modal-body .text-warning {
+  color: #ffa000 !important;
+  font-style: italic;
+  margin-top: 1rem;
+}
+
+/* Footer */
+.modal-footer {
+  border-top: none;
+  padding: 0.75rem 1.5rem;
+}
+.modal-footer .btn-light {
+  background: #f1f1f1 !important;
+  color: #424242 !important;
+  border: none !important;
+  transition: background 0.2s;
+}
+.modal-footer .btn-light:hover {
+  background: #e0e0e0 !important;
+}
+
+
+.edit-bookingTitle{
+    font-size: 1rem;
+    font-weight: 600;
+    color: #9b979b;
+    margin-bottom: 1rem;
+}
+
+.complete-btn{
+    /* background-color: #007bff !important; */
+    /* color: #fff !important; */
+    font-weight: 500;
+    padding: 0.2rem 0rem;
+    border-radius: 0.375rem;
+    transition: background-color 0.3s ease-in-out;
+    width: 80%;
+    font-size: 0.85rem;
+}
+
+.complete-btn:hover{
+    background-color: #007bff !important;
+    color: #fff !important;
+}
+
+
+.review-details{
+    font-size: 1.8rem;
+    color: #9b979b;
+    margin-bottom: 1rem;
+}

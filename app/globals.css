@@ -1,4 +1,4 @@
-:root {
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -27,7 +27,7 @@ body {
   position: relative;
   /* display: flex; */
   /* min-width: 320px; */
-  /* min-height: 100vh; */
+  /* min-height: 100vh; 
 }
 
 h1 {
@@ -43,6 +43,64 @@ button {
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+} */
+
+
+/* --- GLOBAL: force light theme --- */
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* only light now—no dark fallback */
+  color-scheme: light;
+
+  /* white background, dark text by default */
+  background-color: #ffffff;
+  color: #213547; /* or #000 if you prefer pure black */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ensure body inherits it */
+html, body, #__next {
+  background-color: inherit;
+  color: inherit;
+  margin: 0;
+  position: relative;
+}
+
+/* tweak your interactive elements to match */
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #f9f9f9; /* light button */
+  color: inherit;
   cursor: pointer;
   transition: border-color 0.25s;
 }

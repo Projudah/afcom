@@ -23,7 +23,7 @@ const LatestStoresCarousel = ({ stores }) => {
                   <h3 className='latest-stores-name'>{store.name}</h3>
                   <p className='latest-stores-description'>{store.description}</p>
                   <Button variant="primary" href={`/store/${store.id}`}>
-                    Visit Shop
+                    Visit Store
                   </Button>
                 </Carousel.Caption>
               </div>
