@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { FaStar, FaStarHalfAlt, FaRegStar } from 'react-icons/fa';
 import ShowAllItemsModal from './ShowAllItemsModal'; // Import the modal
 import '../../../styles/browseStoreLayout.css';
+import '../../../styles/scopedTopRatedStyle.css'; // Scoped styles for TopRatedStores
 
 const TopRatedStores = ({ stores }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -51,7 +52,7 @@ const TopRatedStores = ({ stores }) => {
   };
 
   return (
-    <Container className="mt-5">
+    <Container className="mt-5 popular-stores-carousel">
       <div className="header-controls-container">
         <h2 className="section-title">Top-Rated Stores</h2>
         <div className="controls-container">

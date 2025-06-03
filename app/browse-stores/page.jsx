@@ -52,49 +52,49 @@ const BrowseStores = () => {
 
 
     setFeaturedProduct([
-        { id: 11, name: 'African Black Soap', price: '$10.00', storeName: 'African Market', image: 'path/to/black-soap.jpg' },
-        { id: 12, name: 'Kente Cloth', price: '$25.00', storeName: 'African Clothing Store', image: 'path/to/kente-cloth.jpg' },
-        { id: 13, name: 'Shea Butter', price: '$8.00', storeName: 'African Market', image: 'path/to/shea-butter.jpg' },
-        { id: 14, name: 'Beaded Necklace', price: '$15.00', storeName: 'African Jewelry', image: 'path/to/beaded-necklace.jpg' },
-        { id: 15, name: 'Kente Cloth', price: '$25.00', storeName: 'African Clothing Store', image: 'path/to/kente-cloth.jpg' },
-        { id: 16, name: 'Shea Butter', price: '$8.00', storeName: 'African Market', image: 'path/to/shea-butter.jpg' },
-        { id: 17, name: 'Beaded Necklace', price: '$15.00', storeName: 'African Jewelry', image: 'path/to/beaded-necklace.jpg' },
-        { id: 18, name: 'Kente Cloth', price: '$25.00', storeName: 'African Clothing Store', image: 'path/to/kente-cloth.jpg' },
-        { id: 19, name: 'Shea Butter', price: '$8.00', storeName: 'African Market', image: 'path/to/shea-butter.jpg' },
-        { id: 20, name: 'Beaded Necklace', price: '$15.00', storeName: 'African Jewelry', image: 'path/to/beaded-necklace.jpg' },
-        { id: 21, name: 'Kente Cloth', price: '$25.00', storeName: 'African Clothing Store', image: 'path/to/kente-cloth.jpg' },
-        { id: 22, name: 'Shea Butter', price: '$8.00', storeName: 'African Market', image: 'path/to/shea-butter.jpg' },
-        { id: 23, name: 'Beaded Necklace', price: '$15.00', storeName: 'African Jewelry', image: 'path/to/beaded-necklace.jpg' },
-        { id: 14, name: 'Beaded Necklace', price: '$15.00', storeName: 'African Jewelry', image: 'path/to/beaded-necklace.jpg' },
-        { id: 15, name: 'Money making', price: '$25.00', storeName: 'African Clothing Store', image: 'path/to/kente-cloth.jpg' },
-        { id: 16, name: 'Shea Butter', price: '$8.00', storeName: 'African Market', image: 'path/to/shea-butter.jpg' },
-        { id: 17, name: 'Beaded Necklace', price: '$15.00', storeName: 'African Jewelry', image: 'path/to/beaded-necklace.jpg' },
-        { id: 18, name: 'Kente Cloth', price: '$25.00', storeName: 'African Clothing Store', image: 'path/to/kente-cloth.jpg' },
-        { id: 19, name: 'Shea Butter', price: '$8.00', storeName: 'African Market', image: 'path/to/shea-butter.jpg' },
-        { id: 20, name: 'Beaded Necklace', price: '$15.00', storeName: 'African Jewelry', image: 'path/to/beaded-necklace.jpg' },
-        { id: 21, name: 'Kente Cloth', price: '$25.00', storeName: 'African Clothing Store', image: 'path/to/kente-cloth.jpg' },
-        { id: 22, name: 'Shea Butter', price: '$8.00', storeName: 'African Market', image: 'path/to/shea-butter.jpg' },
-        { id: 23, name: 'Beaded Necklace', price: '$15.00', storeName: 'African Jewelry', image: 'path/to/beaded-necklace.jpg' },
-        { id: 14, name: 'Money making', price: '$15.00', storeName: 'African Jewelry', image: 'path/to/beaded-necklace.jpg' },
-        { id: 15, name: 'Kente Cloth', price: '$25.00', storeName: 'African Clothing Store', image: 'path/to/kente-cloth.jpg' },
-        { id: 16, name: 'babylove', price: '$8.00', storeName: 'African Market', image: 'path/to/shea-butter.jpg' },
-        { id: 17, name: 'Beaded Necklace', price: '$15.00', storeName: 'African Jewelry', image: 'path/to/beaded-necklace.jpg' },
-        { id: 18, name: 'Money making', price: '$25.00', storeName: 'African Clothing Store', image: 'path/to/kente-cloth.jpg' },
-        { id: 19, name: 'Shea Butter', price: '$8.00', storeName: 'African Market', image: 'path/to/shea-butter.jpg' },
-        { id: 20, name: 'Beaded Necklace', price: '$15.00', storeName: 'African Jewelry', image: 'path/to/beaded-necklace.jpg' },
-        { id: 21, name: 'Kente Cloth', price: '$25.00', storeName: 'African Clothing Store', image: 'path/to/kente-cloth.jpg' },
-        { id: 22, name: 'Shea Butter', price: '$8.00', storeName: 'African Market', image: 'path/to/shea-butter.jpg' },
-        { id: 23, name: 'Money making', price: '$15.00', storeName: 'African Jewelry', image: 'path/to/beaded-necklace.jpg' },
-        { id: 14, name: 'Beaded Necklace', price: '$15.00', storeName: 'African Jewelry', image: 'path/to/beaded-necklace.jpg' },
-        { id: 15, name: 'Money making', price: '$25.00', storeName: 'African Clothing Store', image: 'path/to/kente-cloth.jpg' },
-        { id: 16, name: 'Shea Butter', price: '$8.00', storeName: 'African Market', image: 'path/to/shea-butter.jpg' },
-        { id: 17, name: 'Beaded Necklace', price: '$15.00', storeName: 'African Jewelry', image: 'path/to/beaded-necklace.jpg' },
-        { id: 18, name: 'Money making', price: '$25.00', storeName: 'African Clothing Store', image: 'path/to/kente-cloth.jpg' },
-        { id: 19, name: 'Shea Butter', price: '$8.00', storeName: 'African Market', image: 'path/to/shea-butter.jpg' },
-        { id: 20, name: 'Beaded Necklace', price: '$15.00', storeName: 'African Jewelry', image: 'path/to/beaded-necklace.jpg' },
-        { id: 21, name: 'Kente Cloth', price: '$25.00', storeName: 'African Clothing Store', image: 'path/to/kente-cloth.jpg' },
-        { id: 22, name: 'Money making', price: '$8.00', storeName: 'African Market', image: 'path/to/shea-butter.jpg' },
-        { id: 23, name: 'Beaded Necklace', price: '$15.00', storeName: 'African Jewelry', image: 'path/to/beaded-necklace.jpg' },
+        // { id: 11, name: 'African Black Soap', price: '$10.00', storeName: 'African Market', image: 'path/to/black-soap.jpg' },
+        // { id: 12, name: 'Kente Cloth', price: '$25.00', storeName: 'African Clothing Store', image: 'path/to/kente-cloth.jpg' },
+        // { id: 13, name: 'Shea Butter', price: '$8.00', storeName: 'African Market', image: 'path/to/shea-butter.jpg' },
+        // { id: 14, name: 'Beaded Necklace', price: '$15.00', storeName: 'African Jewelry', image: 'path/to/beaded-necklace.jpg' },
+        // { id: 15, name: 'Kente Cloth', price: '$25.00', storeName: 'African Clothing Store', image: 'path/to/kente-cloth.jpg' },
+        // { id: 16, name: 'Shea Butter', price: '$8.00', storeName: 'African Market', image: 'path/to/shea-butter.jpg' },
+        // { id: 17, name: 'Beaded Necklace', price: '$15.00', storeName: 'African Jewelry', image: 'path/to/beaded-necklace.jpg' },
+        // { id: 18, name: 'Kente Cloth', price: '$25.00', storeName: 'African Clothing Store', image: 'path/to/kente-cloth.jpg' },
+        // { id: 19, name: 'Shea Butter', price: '$8.00', storeName: 'African Market', image: 'path/to/shea-butter.jpg' },
+        // { id: 20, name: 'Beaded Necklace', price: '$15.00', storeName: 'African Jewelry', image: 'path/to/beaded-necklace.jpg' },
+        // { id: 21, name: 'Kente Cloth', price: '$25.00', storeName: 'African Clothing Store', image: 'path/to/kente-cloth.jpg' },
+        // { id: 22, name: 'Shea Butter', price: '$8.00', storeName: 'African Market', image: 'path/to/shea-butter.jpg' },
+        // { id: 23, name: 'Beaded Necklace', price: '$15.00', storeName: 'African Jewelry', image: 'path/to/beaded-necklace.jpg' },
+        // { id: 14, name: 'Beaded Necklace', price: '$15.00', storeName: 'African Jewelry', image: 'path/to/beaded-necklace.jpg' },
+        // { id: 15, name: 'Money making', price: '$25.00', storeName: 'African Clothing Store', image: 'path/to/kente-cloth.jpg' },
+        // { id: 16, name: 'Shea Butter', price: '$8.00', storeName: 'African Market', image: 'path/to/shea-butter.jpg' },
+        // { id: 17, name: 'Beaded Necklace', price: '$15.00', storeName: 'African Jewelry', image: 'path/to/beaded-necklace.jpg' },
+        // { id: 18, name: 'Kente Cloth', price: '$25.00', storeName: 'African Clothing Store', image: 'path/to/kente-cloth.jpg' },
+        // { id: 19, name: 'Shea Butter', price: '$8.00', storeName: 'African Market', image: 'path/to/shea-butter.jpg' },
+        // { id: 20, name: 'Beaded Necklace', price: '$15.00', storeName: 'African Jewelry', image: 'path/to/beaded-necklace.jpg' },
+        // { id: 21, name: 'Kente Cloth', price: '$25.00', storeName: 'African Clothing Store', image: 'path/to/kente-cloth.jpg' },
+        // { id: 22, name: 'Shea Butter', price: '$8.00', storeName: 'African Market', image: 'path/to/shea-butter.jpg' },
+        // { id: 23, name: 'Beaded Necklace', price: '$15.00', storeName: 'African Jewelry', image: 'path/to/beaded-necklace.jpg' },
+        // { id: 14, name: 'Money making', price: '$15.00', storeName: 'African Jewelry', image: 'path/to/beaded-necklace.jpg' },
+        // { id: 15, name: 'Kente Cloth', price: '$25.00', storeName: 'African Clothing Store', image: 'path/to/kente-cloth.jpg' },
+        // { id: 16, name: 'babylove', price: '$8.00', storeName: 'African Market', image: 'path/to/shea-butter.jpg' },
+        // { id: 17, name: 'Beaded Necklace', price: '$15.00', storeName: 'African Jewelry', image: 'path/to/beaded-necklace.jpg' },
+        // { id: 18, name: 'Money making', price: '$25.00', storeName: 'African Clothing Store', image: 'path/to/kente-cloth.jpg' },
+        // { id: 19, name: 'Shea Butter', price: '$8.00', storeName: 'African Market', image: 'path/to/shea-butter.jpg' },
+        // { id: 20, name: 'Beaded Necklace', price: '$15.00', storeName: 'African Jewelry', image: 'path/to/beaded-necklace.jpg' },
+        // { id: 21, name: 'Kente Cloth', price: '$25.00', storeName: 'African Clothing Store', image: 'path/to/kente-cloth.jpg' },
+        // { id: 22, name: 'Shea Butter', price: '$8.00', storeName: 'African Market', image: 'path/to/shea-butter.jpg' },
+        // { id: 23, name: 'Money making', price: '$15.00', storeName: 'African Jewelry', image: 'path/to/beaded-necklace.jpg' },
+        // { id: 14, name: 'Beaded Necklace', price: '$15.00', storeName: 'African Jewelry', image: 'path/to/beaded-necklace.jpg' },
+        // { id: 15, name: 'Money making', price: '$25.00', storeName: 'African Clothing Store', image: 'path/to/kente-cloth.jpg' },
+        // { id: 16, name: 'Shea Butter', price: '$8.00', storeName: 'African Market', image: 'path/to/shea-butter.jpg' },
+        // { id: 17, name: 'Beaded Necklace', price: '$15.00', storeName: 'African Jewelry', image: 'path/to/beaded-necklace.jpg' },
+        // { id: 18, name: 'Money making', price: '$25.00', storeName: 'African Clothing Store', image: 'path/to/kente-cloth.jpg' },
+        // { id: 19, name: 'Shea Butter', price: '$8.00', storeName: 'African Market', image: 'path/to/shea-butter.jpg' },
+        // { id: 20, name: 'Beaded Necklace', price: '$15.00', storeName: 'African Jewelry', image: 'path/to/beaded-necklace.jpg' },
+        // { id: 21, name: 'Kente Cloth', price: '$25.00', storeName: 'African Clothing Store', image: 'path/to/kente-cloth.jpg' },
+        // { id: 22, name: 'Money making', price: '$8.00', storeName: 'African Market', image: 'path/to/shea-butter.jpg' },
+        // { id: 23, name: 'Beaded Necklace', price: '$15.00', storeName: 'African Jewelry', image: 'path/to/beaded-necklace.jpg' },
         
     ]);
 
@@ -217,13 +217,13 @@ const BrowseStores = () => {
             <PopularStores stores={popularStores} />
           </motion.div>
 
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
             <FeaturedProduct products={featuredProduct} />
-          </motion.div>
+          </motion.div> */}
 
           <motion.div
             initial={{ opacity: 0, y: 50 }}

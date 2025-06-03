@@ -83,10 +83,9 @@ body,
 .signup-btn {
   background-color: transparent;
   color: #0f1c3c !important;
-  border: 2px solid #fff;
-  font-weight: bolder !important;
+  font-weight: bold !important;
 }
 .signup-btn:hover {
-  background-color: #fff;
+  background-color: #2f61c2;
   color: #fff !important; /* Dark navy or any deep color you like */
 }

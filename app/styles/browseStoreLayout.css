@@ -4,12 +4,28 @@
     object-fit: cover;
   }
   
-  .section-title {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-align: left;
-  }
+.section-title {
+  font-family: 'Roboto', sans-serif;   /* typical Material font */
+  font-size: 2rem;                     /* slightly larger */
+  font-weight: 500;                    /* medium weight */
+  color: #0F1C3C !important;                      /* a dark grey (not pure black) */
+  letter-spacing: 0.5px;               /* subtle spacing */
+  position: relative;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+/* Thin accent line underneath */
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 48px;                      /* short underline */
+  height: 3px;
+  background-color: #1976d2;        /* Material Indigo 500 */
+  border-radius: 2px;
+}
 
   .latest-stores-name{
     color: black;
@@ -176,8 +192,51 @@
   align-items: center;
 }
 
+/* browseStoreLayout.css */
 
-/* "view more" button used in the browse page */
+/* Container spacing */
+.container.mt-5 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* Section title styling */
+.header-controls-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: #212121;
+  margin: 0;
+}
+
+/* Controls (arrows + “View More”) */
+.controls-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.controls-container .btn-outline-secondary {
+  background-color: #ffffff;
+  border: 1px solid #ced4da;
+  color: #495057;
+  padding: 0.4rem 0.6rem;
+  font-size: 1rem;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.controls-container .btn-outline-secondary:hover {
+  background-color: #f1f3f5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* “View More” as a pill-shaped Material button */
 
 .custom-see-all-btn {
   margin-left: 10px;
@@ -201,7 +260,7 @@
 }
 
 .custom-see-all-btn:hover::after {
-  transform: translateX(5px);  /* Add a slight movement to the arrow on hover */
+  transform: translateX(5px);  
 }
 
 .custom-see-all-btn:hover {
@@ -212,6 +271,112 @@
 .custom-see-all-btn:active {
   background-color: #004085;
   transform: scale(0.95);
+} 
+
+/* Carousel row spacing */
+.carousel-container .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
+
+/* Card styling */
+.carousel-container .card {
+  border: none;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Card image rounding */
+.carousel-container .card-img-top {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  object-fit: cover;
+  height: 180px;
+}
+
+/* Card hover effect */
+.carousel-container .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Card body padding & typography */
+.carousel-container .card-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel-container .card-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #212121;
+  margin-bottom: 0.5rem;
+}
+
+.carousel-container .card-text {
+  flex: 1;
+  font-size: 0.9rem;
+  color: #616161;
+  margin-bottom: 1rem;
+}
+
+/* “Visit Store” button styling inside card */
+.carousel-container .card-body .btn-primary {
+  align-self: flex-start;
+  background-color: #0069d9;
+  border-color: #0062cc;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.9rem;
+  border-radius: 0.375rem;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.carousel-container .card-body .btn-primary:hover {
+  background-color: #005ec2;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+/* Ensure responsive wrapping on narrow screens */
+@media (max-width: 768px) {
+  .carousel-container .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* Optional: slight fade-in animation for cards */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.carousel-container .card {
+  animation: fadeInUp 0.4s ease both;
+}
+
+.carousel-container .col-md-4 {
+  flex: 0 0 calc(33.333% - 0.5rem);
+  max-width: calc(33.333% - 0.5rem);
+}
+
+
+
+
+
+
+
+
 
 

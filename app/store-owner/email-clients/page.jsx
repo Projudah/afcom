@@ -161,7 +161,7 @@ export default function Communication({ params }) {
 
         {/* Compose Dialog */}
         <Dialog open={composeOpen} onClose={closeDialogs} fullWidth maxWidth="sm">
-          <DialogTitle>
+          <DialogTitle sx={{ background: 'linear-gradient(90deg, #0F1C3C, #2F61C2)', color:'#fff' }}>
             Compose Email
             <IconButton onClick={closeDialogs} sx={{ position: 'absolute', right: 8, top: 8 }}>
               <CloseIcon />
@@ -208,7 +208,7 @@ export default function Communication({ params }) {
 
         {/* View Message Dialog */}
         <Dialog open={viewOpen} onClose={closeDialogs} fullWidth maxWidth="sm">
-          <DialogTitle>
+          <DialogTitle sx={{ background: 'linear-gradient(90deg, #0F1C3C, #2F61C2)', color:'#fff' }}>
             Message Details
             <IconButton onClick={closeDialogs} sx={{ position: 'absolute', right: 8, top: 8 }}>
               <CloseIcon />

@@ -4,10 +4,12 @@ import React from 'react';
 import { Carousel, Button, Container } from 'react-bootstrap';
 import { Grow } from '@mui/material';
 import '../../../styles/browseStoreLayout.css';
+import '../../../styles/scopedCarouselStyle.css'; // Scoped styles for TopRatedStores
+
 
 const LatestStoresCarousel = ({ stores }) => {
   return (
-    <Container className="mt-5">
+    <Container className="mt-5 category-carousel">
       <h2 className="section-title">Latest Stores</h2>
       <Carousel>
         {stores.map((store, index) => (

@@ -5,6 +5,8 @@ import { motion } from 'framer-motion';
 import Link from 'next/link'; // Re-importing useNavigate and Link
 import ShowAllItemsModal from './ShowAllItemsModal'; // Import the unified modal
 import '../../../styles/browseStoreLayout.css';
+import '../../../styles/scopedCarouselStyle.css'; // Scoped styles for TopRatedStores
+
 
 const CategoryPopularStores = ({ categories }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -29,10 +31,11 @@ const CategoryPopularStores = ({ categories }) => {
   const visibleCategories = categories.slice(currentIndex, currentIndex + itemsPerPage);
 
   return (
-    <Container className="mt-5">
+    <Container className="mt-5 category-popular-carousel">
       <div className="header-controls-container">
         <h2 className="section-title">Popular in Categories</h2>
         <div className="controls-container">
+            {/* Navigation buttons for pagination */} 
             <Button variant="outline-secondary" onClick={handlePrev} disabled={currentIndex === 0}>
               &lt;
             </Button>

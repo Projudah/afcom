@@ -12,7 +12,8 @@
     margin-bottom: 20px;
     text-align: center;
     font-size: 1.5rem;
-    color: #333;
+    /* color: #333; */
+    color: #fff;
   }
   
   .modal-grid {
@@ -59,7 +60,7 @@
   .modal-close-button {
     display: block;
     margin: 20px auto;
-    background-color: #f44336; /* Red color for close button */
+    background-color: #0056b3; /* Red color for close button */
     color: white;
     border: none;
     padding: 10px 20px;
@@ -71,8 +72,10 @@
   }
   
   .modal-close-button:hover {
-    background-color: #d32f2f;
+    background-color: #007bff;
     transform: translateY(-2px);
   }
   
+  
+
   

@@ -177,6 +177,7 @@ import { Button } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import '../../../styles/modal.css'; // Import the CSS file
+// import '../../../styles/scopedShowAllItemsModal.css'; // Scoped styles for the modal
 
 const ShowAllItemsModal = ({ show, handleClose, items, title, type }) => {
   const [currentPage, setCurrentPage] = useState(1);

@@ -1,0 +1,68 @@
+/* src/styles/storeStatisticsScoped.css */
+
+/* Scoped under .store-statistics so it won’t affect other pages */
+.store-statistics {
+  background: linear-gradient(135deg, #f0f4ff, #ffffff);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin: 2rem auto;
+  max-width: 1500px;
+  color: #1e1e1e;
+  padding: 2rem 1rem;
+}
+
+.store-statistics .MuiGrid-root {
+  text-align: center;
+}
+
+.store-statistics .MuiGrid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 8px;
+}
+
+/* Hover lift effect for each statistic */
+.store-statistics .MuiGrid-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Number styling */
+.store-statistics .MuiTypography-h4 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #0f1c3c;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Label styling */
+.store-statistics .MuiTypography-body1 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Divider line between items on wide screens */
+@media (min-width: 600px) {
+  .store-statistics .MuiGrid-item:not(:last-child) {
+    border-right: 1px solid rgba(0,0,0,0.08);
+  }
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .store-statistics .MuiGrid-item {
+    border-right: none;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+  .store-statistics .MuiGrid-item:last-child {
+    border-bottom: none;
+  }
+}

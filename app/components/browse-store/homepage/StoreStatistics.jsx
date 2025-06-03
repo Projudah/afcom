@@ -3,10 +3,12 @@
 import React from 'react';
 import { Grid, Typography, Box } from '@mui/material';
 import '../../../styles/browseStoreLayout.css';
+// import '../../../styles/scopedStoreStatisticsScoped.css';
+
 
 const StoreStatistics = ({ stats }) => {
   return (
-    <Box className="store-statistics" sx={{ p: 4, mb: 4, textAlign: 'center' }}>
+    <Box className="store-statistics" sx={{ color:'#007bff;', p: 4, mb: 4, textAlign: 'center' }}>
       <Grid container spacing={4}>
         <Grid item xs={12} sm={4}>
           <Typography variant="h4">{stats.totalStores}</Typography>

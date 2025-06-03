@@ -6,7 +6,7 @@ import Link from 'next/link';
 const HelpModal = ({ show, handleClose }) => {
   return (
     <Modal show={show} onHide={handleClose}>
-      <Modal.Header closeButton>
+      <Modal.Header className='contactModal-Header text-white' closeButton>
         <Modal.Title>Help & Support</Modal.Title>
       </Modal.Header>
       <Modal.Body>

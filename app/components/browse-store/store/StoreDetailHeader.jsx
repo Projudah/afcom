@@ -6,7 +6,7 @@ import {
   FaPhone, FaEnvelope, FaMapMarkerAlt, FaStar, FaComments,
   FaCheckCircle, FaTimesCircle 
 } from 'react-icons/fa';
-import InquiryModal from './InquiryModal';
+import InquiryModal from './GeneralInquiryModal';
 import RateUsModal from '../store/RateUsModal'; // Import the RateUsModal component
 import ChatBox from './ChatBox';
 import '../../../styles/storeDetails.css';
@@ -88,9 +88,9 @@ const StoreDetailHeader = ({ store }) => {
               <Card.Text>
                 <FaMapMarkerAlt /> {store.location}
               </Card.Text>
-              <Card.Text>
+              {/* <Card.Text>
                 <FaPhone /> {store.phone.join(', ')}
-              </Card.Text>
+              </Card.Text> */}
               <Card.Text>
                 <FaEnvelope /> {store.email}
                 <span className="email-website-separator"></span>
@@ -100,13 +100,13 @@ const StoreDetailHeader = ({ store }) => {
             <Col md={3} className="align-items-center d-flex justify-content-end">
               <div className="storeDetails-button-group">
                 <Button variant="primary" className="inquiry-button mr-2" onClick={handleInquiryModalShow}>
-                  <FaEnvelope className="storeDetails-button-icon" /> Inquiry
+                  <FaEnvelope className="storeDetails-button-icon" /> Contact Us
                 </Button>
                 <Button variant="primary" className="inquiry-button mr-2" onClick={handleRateUsModalShow}>
-                  <FaThumbsUp className="storeDetails-button-icon" /> Rate us
+                  <FaThumbsUp className="storeDetails-button-icon" /> Rate Us
                 </Button>
                 <Button variant="success" className="storeDetails-chat-button" onClick={() => setShowChatBox(!showChatBox)}>
-                  <FaComments className="storeDetails-button-icon" /> Chat with us
+                  <FaComments className="storeDetails-button-icon" /> Chat With Us
                 </Button>
               </div> 
 
