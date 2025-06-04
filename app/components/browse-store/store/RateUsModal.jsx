@@ -80,9 +80,9 @@ const RateUsModal = ({ show, handleClose, onSubmitRating }) => {
             </div>
 
             <div className="d-flex justify-content-center gap-2">
-              <Button variant="outline-primary" onClick={navigateToReview}>
+              {/* <Button variant="outline-primary" onClick={navigateToReview}>
                 <span className="fw-semibold" onClick={navigateToAddReview} >Add Review</span>
-              </Button>
+              </Button> */}
               <Button
                 variant="primary"
                 onClick={handleSubmit}

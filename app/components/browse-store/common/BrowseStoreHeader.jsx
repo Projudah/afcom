@@ -34,12 +34,12 @@ const BrowseNavbar = () => {
         expand="lg" 
         className="browse-navbar" 
         style={{
-          background: 'linear-gradient(90deg, #0F1C3C, #2F61C2)',
+          background: 'linear-gradient(135deg, #02192F 0%, #064876 100%)',
           color: '#fff'
         }}
       >
         <Container fluid>
-          <Link href="/" passHref>
+          <Link href="/browse-stores" passHref>
             <Navbar.Brand style={{ color: '#fff', fontWeight: '600', cursor: 'pointer' }}>
               ZolaHub
             </Navbar.Brand>

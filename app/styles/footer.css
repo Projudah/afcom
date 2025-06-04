@@ -49,4 +49,18 @@
   .content-wrap {
     flex: 1;
   }
+
+  /* Base footer text */
+.footer .footer-text,
+.footer a.footer-text {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+/* On hover, maybe give a subtle effect */
+.footer .footer-text:hover,
+.footer a.footer-text:hover {
+  color: #ddd !important;
+  text-decoration: none !important;
+}
   

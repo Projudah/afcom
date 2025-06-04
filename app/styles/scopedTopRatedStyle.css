@@ -186,3 +186,221 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   transform: translateY(-1px);
 }
+
+/* ==========================
+   0. Reuse “Popular Stores” card rules
+   (scoped under .popular-stores-carousel)
+   ========================== */
+
+.popular-stores-carousel .carousel-container .card {
+  border: none;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  animation: fadeInUp 0.4s ease both;
+}
+
+.popular-stores-carousel .carousel-container .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 1. Full‐bleed store image (200px tall, cover) */
+.popular-stores-carousel .carousel-container .card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+/* 2. Logo‐only styling: center + contain on light background */
+.popular-stores-carousel .carousel-container .card-img-logo-only {
+  width: 100%;
+  height: 140px;
+  background-color: #f5f5f5;   /* light grey backdrop */
+  object-fit: contain;         /* keep logo aspect ratio */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;               /* whitespace around logo */
+}
+
+.popular-stores-carousel .carousel-container .card-img-logo-only img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+/* 3. Card body background & padding */
+.popular-stores-carousel .carousel-container .card-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #fafafa;  /* slight off‐white */
+}
+
+/* 4. Store name (title) */
+.popular-stores-carousel .carousel-container .card-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #212121;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+/* 5. Category text (muted) */
+.popular-stores-carousel .carousel-container .card-text {
+  font-size: 0.9rem;
+  color: #616161;
+  margin-bottom: 0.75rem;
+}
+
+/* 6. “Visit Store” button (Material‐style contained) */
+.popular-stores-carousel .carousel-container .btn-contained {
+  background-color: #1976d2; /* Material Indigo 600 */
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 0.375rem;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.popular-stores-carousel .carousel-container .btn-contained:hover {
+  background-color: #155fa0; /* slightly darker */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  transform: translateY(-1px);
+}
+
+/* 7. Star rating container */
+.popular-stores-carousel .star-rating-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+/* 7a. Each star (full, half, empty) */
+.popular-stores-carousel .star-rating svg {
+  color: #ffc107;  /* gold */
+  margin-right: 0.25rem;
+  font-size: 1rem;
+}
+
+/* 7b. Rating count box */
+.popular-stores-carousel .rating-box {
+  font-size: 0.85rem;
+  color: #555;
+  padding: 0.25rem 0.5rem;
+  background-color: #e9ecef; /* very light gray */
+  border-radius: 0.375rem;
+  margin-left: 0.5rem;
+}
+
+/* 8. Grid layout: 3 cards per row, small gap */
+.popular-stores-carousel .carousel-container .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.popular-stores-carousel .carousel-container .col-md-4 {
+  flex: 0 0 calc(33.333% - 0.5rem);
+  max-width: calc(33.333% - 0.5rem);
+}
+
+@media (max-width: 768px) {
+  .popular-stores-carousel .carousel-container .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* 9. FadeInUp animation (reusable) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 10. Header + controls styling */
+.popular-stores-carousel .header-controls-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.popular-stores-carousel .header-controls-container .section-title {
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: #212121;
+  margin: 0;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.popular-stores-carousel .header-controls-container .section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 40px;
+  height: 3px;
+  background-color: #1976d2;
+  border-radius: 2px;
+}
+
+.popular-stores-carousel .controls-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.popular-stores-carousel .controls-container .btn-outline-secondary {
+  background-color: #ffffff;
+  border: 1px solid #ced4da;
+  color: #495057;
+  padding: 0.4rem 0.6rem;
+  font-size: 1rem;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+  border-radius: 0.375rem;
+}
+
+.popular-stores-carousel .controls-container .btn-outline-secondary:hover {
+  background-color: #f1f3f5;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  color: #212121;
+}
+
+.popular-stores-carousel .navigation-arrows-component {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.popular-stores-carousel .custom-see-all-btn {
+  cursor: pointer;
+  background-color: #0069d9; /* Bootstrap primary */
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.45rem 1rem;
+  border-radius: 24px;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+  user-select: none;
+}
+
+.popular-stores-carousel .custom-see-all-btn:hover {
+  background-color: #0056b3;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}

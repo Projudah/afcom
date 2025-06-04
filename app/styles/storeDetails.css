@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap');
 
 .contactModal-Header {
-  background: linear-gradient(90deg, #0F1C3C, #2F61C2);
+  background: linear-gradient(135deg, #02192F 0%, #064876 100%);
   color: #ffffff; /* keep text white */
 }
 
